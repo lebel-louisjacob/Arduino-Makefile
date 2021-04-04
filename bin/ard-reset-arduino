@@ -101,7 +101,7 @@ elif args.caterina:
     ser = serial.Serial(args.port[0], 57600)
     ser.close()
 
-    if pyserial_version < 3:
+    if float(serial.VERSION) < 3:
       ser.setBaudrate (1200)
     else:
       ser.baudrate = 1200
